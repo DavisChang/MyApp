@@ -18,6 +18,7 @@ import login from './login';
 import register from './register';
 import content from './content';
 import error from './error';
+import aframe from './aframe';
 
 // DevTools
 import DevToolsPanel from '../containers/DevToolsPanel';
@@ -31,12 +32,14 @@ export default {
     contact,
     login,
     register,
+    aframe,
     content,
     error,
   ],
 
   async action({ next, render, context, store }) {
     const component = await next();
+    console.log(component);
     if (component === undefined) return component;
     return render(
       <div>

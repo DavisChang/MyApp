@@ -27,9 +27,14 @@ export default {
       }),
       credentials: 'include',
     });
+    console.log(resp);
     if (resp.status !== 200) throw new Error(resp.statusText);
     const { data } = await resp.json();
-    if (!data || !data.content) return undefined;
+
+    if (!data || !data.content) {
+      console.log('content empty !!');
+      return undefined;
+    }
     return <Content {...data.content} />;
   },
 

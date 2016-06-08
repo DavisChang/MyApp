@@ -15,6 +15,8 @@ import routes from './routes';
 import history from './core/history';
 import { addEventListener, removeEventListener } from './core/DOMUtils';
 import configureStore from './store/configureStore';
+import { aframe } from 'aframe';
+
 
 const context = {
   insertCss: styles => styles._insertCss(), // eslint-disable-line no-underscore-dangle
